@@ -11,6 +11,8 @@ import {
     createSlide,
     createCounter,
     createBoard,
+    createGoBoard,
+    create24Points,
 } from "./apps";
 import "../dist/style.css";
 import "./register";
@@ -140,9 +142,8 @@ const joinRoom = ref => {
                 invisiblePlugins: [WindowManager as any],
                 useMultiViews: true,
                 userPayload: {
-                    userId: "111",
+                    userId: "Apple",
                     cursorName: uid,
-                    avatar: "https://avatars.githubusercontent.com/u/8299540?s=60&v=4",
                 },
                 isWritable: !(isWritable === "false"),
                 cursorAdapter: undefined,
@@ -207,6 +208,12 @@ const App = () => {
                 }}
             ></div>
             <div className="side">
+                <button className="side-button" onClick={() => create24Points(manager)}>
+                    24Points
+                </button>
+                <button className="side-button" onClick={() => createGoBoard(manager)}>
+                    GoBoard
+                </button>
                 <button className="side-button" onClick={() => createHelloWorld(manager)}>
                     Hello World
                 </button>

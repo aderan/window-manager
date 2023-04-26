@@ -2,6 +2,8 @@ import { WindowManager } from "../dist";
 import "./app/helloworld-app";
 import "./app/counter";
 import { Board } from "./app/board";
+import { GoBoard } from "./app/goboard";
+import { Points } from "./app/24points";
 
 WindowManager.register({
     kind: "Slide",
@@ -34,6 +36,16 @@ WindowManager.register({
 });
 
 WindowManager.register({
+    kind: "GoBoard",
+    src: GoBoard,
+});
+
+WindowManager.register({
     kind: "Board",
     src: Board,
+});
+
+WindowManager.register({
+    kind: "24Points",
+    src: Points,
 });

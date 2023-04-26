@@ -27,6 +27,7 @@ export const createStatic = (manager: WindowManager) => {
         },
     });
 };
+
 export const createDynamic = (manager: WindowManager) => {
     return manager.addApp({
         kind: BuiltinApps.DocsViewer,
@@ -37,6 +38,7 @@ export const createDynamic = (manager: WindowManager) => {
         },
     });
 };
+
 export const createVideo = (manager: WindowManager) => {
     manager.addApp({
         kind: BuiltinApps.MediaPlayer,
@@ -60,11 +62,30 @@ export const createSlide = (manager: WindowManager) => {
     });
 };
 
+export const createGoBoard = (manager: WindowManager) => {
+    return manager.addApp({
+        kind: "GoBoard",
+        options: {
+            scenePath: "/goboard1",
+        },
+    });
+};
+
 export const createBoard = (manager: WindowManager) => {
     return manager.addApp({
         kind: "Board",
         options: {
             scenePath: "/board1",
+        },
+    });
+};
+
+
+export const create24Points = (manager: WindowManager) => {
+    return manager.addApp({
+        kind: "24Points",
+        options: {
+            scenePath: "/24Points",
         },
     });
 };
